@@ -8,12 +8,9 @@ import {Colors} from 'react-native/Libraries/NewAppScreen';
 const App = () => (
   <View style={styles.app}>
     <Text>Hello</Text>
-    <LottieView 
-      style={styles.lottie}
-      source={require('./animation.json')}
-      autoPlay
-      loop
-    />
+    <View style={styles.lottieContainer}>
+      <LottieView source={require('./animation.json')} autoPlay loop />
+    </View>
   </View>
 );
 
@@ -22,7 +19,7 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: Colors.lighter,
   },
-  lottie: {
+  lottieContainer: {
     flex: 1,
   },
 });
